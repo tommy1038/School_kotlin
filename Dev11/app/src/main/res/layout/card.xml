@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_item_height"
+            android:layout_margin="@dimen/card_item_margin"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/card_item_height"
+                android:layout_height="@dimen/card_item_height"
+                tools:srcCompat="@tools:sample/avatars" android:padding="4dp"/>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/title_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/card_item_margin"
+                        android:layout_marginLeft="@dimen/card_item_margin"
+                        android:layout_weight="2"
+                        android:text="Sample Text"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/like_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/card_item_margin"
+                        android:gravity="center"
+                        android:text="0 Likes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="italic"
+                        android:layout_marginEnd="@dimen/card_item_margin"/>
+
+
+                <ImageView
+                        android:id="@+id/like_button"
+                        android:layout_width="@dimen/card_item_favorite_size"
+                        android:layout_height="@dimen/card_item_favorite_size"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="center"
+                        android:src="@drawable/heart_pink"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_weight="2"
+                    android:text="Sample Text"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="@dimen/text_size_content"
+                    tools:ignore="RtlCompat" android:layout_margin="@dimen/card_item_margin"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dev11</string>
+
+    <!--sing-->
+    <string name="sing_title">sing</string>
+    <string name="sing_content">・She sang to the piano.\n・The birds were singing in the trees. </string>
+    <string name="sing_meaning">歌う</string>
+    <!--voice-->
+    <string name="voice_title">voice</string>
+    <string name="voice_content">・Shout at the top of his voice.\n・Her voice sang in my ears. </string>
+    <string name="voice_meaning">声</string>
+
+</resources>
