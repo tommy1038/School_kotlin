@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         if (answer) {
             point++
-            Log.d("maru", "正解$point")
+            Log.d("maru", "正解" + number.toString())
         } else {
             Log.d("maru", "不正解")
         }
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("batsu", "不正解")
         } else {
             point++
-            Log.d("batsu", "正解$point")
+            Log.d("batsu", "正解" + number.toString())
         }
 
         answerCount++
