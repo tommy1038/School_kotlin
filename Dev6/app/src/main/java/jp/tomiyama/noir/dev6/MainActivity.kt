@@ -12,8 +12,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     var random: Random = Random()
-    val QUESTION_COUNT = 10
-    lateinit var questions: IntArray
+    val questions: IntArray = IntArray(QUESTION_COUNT)
     var point: Int = 0
     var answerCount: Int = 0
 
@@ -21,11 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        questions = IntArray(QUESTION_COUNT)
-
         for (i in 0 until QUESTION_COUNT) {
             val number = random.nextInt(1000)
-            Log.d("Number", "Question$number")
+            Log.d("Number", "Question" + number.toString())
             questions[i] = number
         }
 
@@ -49,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
         if (answer) {
             Toast.makeText(this, "正解", Toast.LENGTH_SHORT).show()
-
         } else {
             Toast.makeText(this, "不正解", Toast.LENGTH_SHORT).show()
         }
@@ -111,5 +107,9 @@ class MainActivity : AppCompatActivity() {
             textView.text = questions[answerCount].toString()
             textView.setTextColor(Color.BLACK)
         }
+    }
+
+    companion object {
+        private const val QUESTION_COUNT: Int = 10
     }
 }
